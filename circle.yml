@@ -1,0 +1,11 @@
+machine:
+  php:
+    version: 5.6
+
+dependencies:
+  pre:
+    - nohup java -Djava.library.path=./DynamoDBLocal_lib -jar dynamodb_local/DynamoDBLocal.jar --port 3000 &
+
+test:
+  override:
+    - phpunit
