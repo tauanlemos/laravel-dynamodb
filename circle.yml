@@ -6,7 +6,7 @@ machine:
   java:
     version: openjdk7
   post:
-    java -Djava.library.path=./DynamoDBLocal_lib -jar dynamodb_local/DynamoDBLocal.jar --port 3000:
+    - java -Djava.library.path=./DynamoDBLocal_lib -jar dynamodb_local/DynamoDBLocal.jar --port 3000:
       background: true
 
 test:
